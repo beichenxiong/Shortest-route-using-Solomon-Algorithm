@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bGadgGjZ0a0wkSMCCo9inVxaegK6vOxT"></script>
+<title>C101-maxDistance</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+var map = new BMap.Map("allmap");
+map.centerAndZoom(new BMap.Point(114.066112,22.548515),12);
+map.enableScrollWheelZoom();  //允许鼠标滚轮缩放
+//标记点
+var point=new BMap.Point(114.103708333867,22.564042955094);
+var point1=new BMap.Point(114.063369020329,22.571435448754);
+var point2=new BMap.Point(114.059399905604,22.530597664196);
+var point3=new BMap.Point(113.923529464981,22.529925384397)
+var point4=new BMap.Point(114.103889244600,22.548862529859)
+var point5=new BMap.Point(113.911415475086,22.535581971020 )
+var point6=new BMap.Point(114.113380117849,22.545269868127)
+var point7=new BMap.Point(113.924346810271,22.547182736556)
+var point8=new BMap.Point(114.038308431357,22.560156226129)
+var point9=new BMap.Point(114.048171913032,22.567179850768)
+var point10=new BMap.Point(114.073930986440,22.539727391684)
+var point11=new BMap.Point(114.024314816849,22.625842767768)
+var point12=new BMap.Point(113.962085370086,22.539920467514)
+var point13=new BMap.Point(113.949008457355,22.553162312847 )
+var point14=new BMap.Point(114.041056935380,22.530369065085)
+var point15=new BMap.Point(114.025419969714,22.530548234207)
+var point16=new BMap.Point(114.077741278472,22.549410149853)
+var point17=new BMap.Point(114.067628596989,22.518491395627)
+var point18=new BMap.Point(113.920272197982,22.489868096970)
+var point19=new BMap.Point(113.892603998097,22.560462653023)
+var point20=new BMap.Point(113.912520373374,22.530991301934)
+var point21=new BMap.Point(113.917500716905,22.513049741059)
+var point22=new BMap.Point(114.086457881064,22.540525966545)
+var point23=new BMap.Point(114.111356495946,22.577041840170)
+var point24=new BMap.Point(113.909752432344,22.524218189850) 
+var point25=new BMap.Point(114.088110348931,22.550137905738 )
+var point26=new BMap.Point(113.865770470848,22.583498529467)
+var point27=new BMap.Point(114.107987255046,22.551071093946)
+var point28=new BMap.Point(114.117102805271,22.544725525265)
+var point29=new BMap.Point(113.842862283047,22.613911771118 )
+var point30=new BMap.Point(113.896168602234,22.571249703261 )
+var point31=new BMap.Point(113.843452339281,22.599411528653 )
+var point32=new BMap.Point(114.102988772055,22.554081094085 )
+var point33=new BMap.Point(114.111349789302,22.536515952012 )
+var point34=new BMap.Point(114.078745133650,22.538560454974)
+var point35=new BMap.Point(114.108722936081,22.539748233572 )
+var point36=new BMap.Point(113.951342713959,22.579210084283 )
+var point37=new BMap.Point(114.095363565205,22.560598225501)
+var point38=new BMap.Point(114.126583293724,22.552345976928 )
+var point39=new BMap.Point(114.119647017260,22.548990780336 )
+var point40=new BMap.Point(114.021225779671,22.657496070721 )
+var point41=new BMap.Point(114.056520304848,22.664354109307)
+var point42=new BMap.Point(113.943419543030,22.584665017709)
+var point43=new BMap.Point(114.110230352952,22.609168535230)
+var point44=new BMap.Point(114.032424942955,22.631558476633)
+var point45=new BMap.Point(114.055652397775,22.635002689261)
+var point46=new BMap.Point(114.115945601709,22.557737796582)
+var point47=new BMap.Point(114.111605094906,22.602388245470)
+var point48=new BMap.Point(114.01792073938,22.749343385767)
+var point49=new BMap.Point(114.097804877207,22.564540130615)
+var point50=new BMap.Point(114.118930591624,22.539590032657)
+
+
+//标记点
+var marker0=new BMap.Marker(new BMap.Point(114.103601176395,22.566688179115));
+map.addOverlay(marker0);
+var label = new BMap.Label("0",{offset:new BMap.Size(20,-10)});
+marker0.setLabel(label);
+
+var marker1=new BMap.Marker(new BMap.Point(114.063369020329,22.571435448754));
+map.addOverlay(marker1);
+var label = new BMap.Label("1",{offset:new BMap.Size(20,-10)});
+marker1.setLabel(label);
+
+var marker2=new BMap.Marker(new BMap.Point(114.059399905604,22.530597664196));
+map.addOverlay(marker2);
+var label = new BMap.Label("2",{offset:new BMap.Size(20,-10)});
+marker2.setLabel(label);
+
+var marker3=new BMap.Marker(new BMap.Point(113.923529464981,22.529925384397));
+map.addOverlay(marker3);
+var label = new BMap.Label("3",{offset:new BMap.Size(20,-10)});
+marker3.setLabel(label);
+
+var marker4=new BMap.Marker(new BMap.Point(114.103889244600,22.548862529859));
+map.addOverlay(marker4);
+var label = new BMap.Label("4",{offset:new BMap.Size(20,-10)});
+marker4.setLabel(label);
+
+var marker5=new BMap.Marker(new BMap.Point(113.911415475086,22.535581971020 ));
+map.addOverlay(marker5);
+var label = new BMap.Label("5",{offset:new BMap.Size(20,-10)});
+marker5.setLabel(label);
+
+var marker6=new BMap.Marker(new BMap.Point(114.113380117849,22.545269868127));
+map.addOverlay(marker6);
+var label = new BMap.Label("6",{offset:new BMap.Size(20,-10)});
+marker6.setLabel(label);
+
+var marker7=new BMap.Marker(new BMap.Point(113.924346810271,22.547182736556));
+map.addOverlay(marker7);
+var label = new BMap.Label("7",{offset:new BMap.Size(20,-10)});
+marker7.setLabel(label);
+
+var marker8=new BMap.Marker(new BMap.Point(114.038308431357,22.560156226129));
+map.addOverlay(marker8);
+var label = new BMap.Label("8",{offset:new BMap.Size(20,-10)});
+marker8.setLabel(label);
+
+var marker9=new BMap.Marker(new BMap.Point(114.048171913032,22.567179850768));
+map.addOverlay(marker9);
+var label = new BMap.Label("9",{offset:new BMap.Size(20,-10)});
+marker9.setLabel(label);
+
+var marker10=new BMap.Marker(new BMap.Point(114.073930986440,22.539727391684));
+map.addOverlay(marker10);
+var label = new BMap.Label("10",{offset:new BMap.Size(20,-10)});
+marker10.setLabel(label);
+
+var marker11=new BMap.Marker(new BMap.Point(114.024314816849,22.625842767768));
+map.addOverlay(marker11);
+var label = new BMap.Label("11",{offset:new BMap.Size(20,-10)});
+marker11.setLabel(label);
+
+var marker12=new BMap.Marker(new BMap.Point(113.962085370086,22.539920467514));
+map.addOverlay(marker12);
+var label = new BMap.Label("12",{offset:new BMap.Size(20,-10)});
+marker12.setLabel(label);
+
+var marker13=new BMap.Marker(new BMap.Point(113.949008457355,22.553162312847 ));
+map.addOverlay(marker13);
+var label = new BMap.Label("13",{offset:new BMap.Size(20,-10)});
+marker13.setLabel(label);
+
+var marker14=new BMap.Marker(new BMap.Point(114.041056935380,22.530369065085));
+map.addOverlay(marker14);
+var label = new BMap.Label("14",{offset:new BMap.Size(20,-10)});
+marker14.setLabel(label);
+
+var marker15=new BMap.Marker(new BMap.Point(114.025419969714,22.530548234207));
+map.addOverlay(marker15);
+var label = new BMap.Label("15",{offset:new BMap.Size(20,-10)});
+marker15.setLabel(label);
+
+var marker16=new BMap.Marker(new BMap.Point(114.077741278472,22.549410149853));
+map.addOverlay(marker16);
+var label = new BMap.Label("16",{offset:new BMap.Size(20,-10)});
+marker16.setLabel(label);
+
+var marker17=new BMap.Marker(new BMap.Point(114.067628596989,22.518491395627));
+map.addOverlay(marker17);
+var label = new BMap.Label("17",{offset:new BMap.Size(20,-10)});
+marker17.setLabel(label);
+
+var marker18=new BMap.Marker(new BMap.Point(113.920272197982,22.489868096970));
+map.addOverlay(marker18);
+var label = new BMap.Label("18",{offset:new BMap.Size(20,-10)});
+marker18.setLabel(label);
+
+var marker19=new BMap.Marker(new BMap.Point(113.892603998097,22.560462653023));
+map.addOverlay(marker19);
+var label = new BMap.Label("19",{offset:new BMap.Size(20,-10)});
+marker19.setLabel(label);
+
+var marker20=new BMap.Marker(new BMap.Point(113.912520373374,22.530991301934));
+map.addOverlay(marker20);
+var label = new BMap.Label("20",{offset:new BMap.Size(20,-10)});
+marker20.setLabel(label);
+
+var marker21=new BMap.Marker(new BMap.Point(113.917500716905,22.513049741059));
+map.addOverlay(marker21);
+var label = new BMap.Label("21",{offset:new BMap.Size(20,-10)});
+marker21.setLabel(label);
+
+var marker22=new BMap.Marker(new BMap.Point(114.086457881064,22.540525966545));
+map.addOverlay(marker22);
+var label = new BMap.Label("22",{offset:new BMap.Size(20,-10)});
+marker22.setLabel(label);
+
+var marker23=new BMap.Marker(new BMap.Point(114.111356495946,22.577041840170));
+map.addOverlay(marker23);
+var label = new BMap.Label("23",{offset:new BMap.Size(20,-10)});
+marker23.setLabel(label);
+
+var marker24=new BMap.Marker(new BMap.Point(113.909752432344,22.524218189850));  
+map.addOverlay(marker24);
+var label = new BMap.Label("24",{offset:new BMap.Size(20,-10)});
+marker24.setLabel(label);
+
+var marker25=new BMap.Marker(new BMap.Point(114.088110348931,22.550137905738 ));
+map.addOverlay(marker25);
+var label = new BMap.Label("25",{offset:new BMap.Size(20,-10)});
+marker25.setLabel(label);
+
+var marker26=new BMap.Marker(new BMap.Point(113.865770470848,22.583498529467));
+map.addOverlay(marker26);
+var label = new BMap.Label("26",{offset:new BMap.Size(20,-10)});
+marker26.setLabel(label);
+
+var marker27=new BMap.Marker(new BMap.Point(114.107987255046,22.551071093946));
+map.addOverlay(marker27);
+var label = new BMap.Label("27",{offset:new BMap.Size(20,-10)});
+marker27.setLabel(label);
+
+var marker28=new BMap.Marker(new BMap.Point(114.117102805271,22.544725525265));
+map.addOverlay(marker28);
+var label = new BMap.Label("28",{offset:new BMap.Size(20,-10)});
+marker28.setLabel(label);
+
+var marker29=new BMap.Marker(new BMap.Point(113.842862283047,22.613911771118 ));
+map.addOverlay(marker29);
+var label = new BMap.Label("29",{offset:new BMap.Size(20,-10)});
+marker29.setLabel(label);
+
+var marker30=new BMap.Marker(new BMap.Point(113.896168602234,22.571249703261 ));
+map.addOverlay(marker30);
+var label = new BMap.Label("30",{offset:new BMap.Size(20,-10)});
+marker30.setLabel(label);
+
+var marker31=new BMap.Marker(new BMap.Point(113.843452339281,22.599411528653 ));
+map.addOverlay(marker31);
+var label = new BMap.Label("31",{offset:new BMap.Size(20,-10)});
+marker31.setLabel(label);
+
+var marker32=new BMap.Marker(new BMap.Point(114.102988772055,22.554081094085 ));
+map.addOverlay(marker32);
+var label = new BMap.Label("32",{offset:new BMap.Size(20,-10)});
+marker32.setLabel(label);
+
+var marker33=new BMap.Marker(new BMap.Point(114.111349789302,22.536515952012 ));
+map.addOverlay(marker33);
+var label = new BMap.Label("33",{offset:new BMap.Size(20,-10)});
+marker33.setLabel(label);
+
+var marker34=new BMap.Marker(new BMap.Point(114.078745133650,22.538560454974)); 
+map.addOverlay(marker34);
+var label = new BMap.Label("34",{offset:new BMap.Size(20,-10)});
+marker34.setLabel(label);
+
+var marker35=new BMap.Marker(new BMap.Point(114.108722936081,22.539748233572 ));
+map.addOverlay(marker35);
+var label = new BMap.Label("35",{offset:new BMap.Size(20,-10)});
+marker35.setLabel(label);
+
+var marker36=new BMap.Marker(new BMap.Point(113.951342713959,22.579210084283 ));
+map.addOverlay(marker36);
+var label = new BMap.Label("36",{offset:new BMap.Size(20,-10)});
+marker36.setLabel(label);
+
+var marker37=new BMap.Marker(new BMap.Point(114.095363565205,22.560598225501));
+map.addOverlay(marker37);
+var label = new BMap.Label("37",{offset:new BMap.Size(20,-10)});
+marker37.setLabel(label);
+
+var marker38=new BMap.Marker(new BMap.Point(114.126583293724,22.552345976928 ));
+map.addOverlay(marker38);
+var label = new BMap.Label("38",{offset:new BMap.Size(20,-10)});
+marker38.setLabel(label);
+
+var marker39=new BMap.Marker(new BMap.Point(114.119647017260,22.548990780336 ));
+map.addOverlay(marker39);
+var label = new BMap.Label("39",{offset:new BMap.Size(20,-10)});
+marker39.setLabel(label);
+
+var marker40=new BMap.Marker(new BMap.Point(114.021225779671,22.657496070721 ));
+map.addOverlay(marker40);
+var label = new BMap.Label("40",{offset:new BMap.Size(20,-10)});
+marker40.setLabel(label);
+
+var marker41=new BMap.Marker(new BMap.Point(114.056520304848,22.664354109307));
+map.addOverlay(marker41);
+var label = new BMap.Label("41",{offset:new BMap.Size(20,-10)});
+marker41.setLabel(label);
+
+var marker42=new BMap.Marker(new BMap.Point(113.943419543030,22.584665017709));
+map.addOverlay(marker42);
+var label = new BMap.Label("42",{offset:new BMap.Size(20,-10)});
+marker42.setLabel(label);
+
+var marker43=new BMap.Marker(new BMap.Point(114.110230352952,22.609168535230));
+map.addOverlay(marker43);
+var label = new BMap.Label("43",{offset:new BMap.Size(20,-10)});
+marker43.setLabel(label);
+
+var marker44=new BMap.Marker(new BMap.Point(114.032424942955,22.631558476633));
+map.addOverlay(marker44);
+var label = new BMap.Label("44",{offset:new BMap.Size(20,-10)});
+marker44.setLabel(label);
+
+var marker45=new BMap.Marker(new BMap.Point(114.055652397775,22.635002689261));
+map.addOverlay(marker45);
+var label = new BMap.Label("45",{offset:new BMap.Size(20,-10)});
+marker45.setLabel(label);
+
+var marker46=new BMap.Marker(new BMap.Point(114.115945601709,22.557737796582));
+map.addOverlay(marker46);
+var label = new BMap.Label("46",{offset:new BMap.Size(20,-10)});
+marker46.setLabel(label);
+
+var marker47=new BMap.Marker(new BMap.Point(114.111605094906,22.602388245470));
+map.addOverlay(marker47);
+var label = new BMap.Label("47",{offset:new BMap.Size(20,-10)});
+marker47.setLabel(label);
+
+var marker48=new BMap.Marker(new BMap.Point(114.01792073938,22.749343385767));
+map.addOverlay(marker48);
+var label = new BMap.Label("48",{offset:new BMap.Size(20,-10)});
+marker48.setLabel(label);
+
+var marker49=new BMap.Marker(new BMap.Point(114.097804877207,22.564540130615));
+map.addOverlay(marker49);
+var label = new BMap.Label("49",{offset:new BMap.Size(20,-10)});
+marker49.setLabel(label);
+
+var marker50=new BMap.Marker(new BMap.Point(114.118930591624,22.539590032657));
+map.addOverlay(marker50);
+var label = new BMap.Label("50",{offset:new BMap.Size(20,-10)});
+marker50.setLabel(label);
+
+
+
+//标记路径
+var polyline = new BMap.Polyline([
+point,point48,point45,point41,point1,point40,point11,point44,point29,point31,point26,point
+], {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});                                               
+//map.addOverlay(polyline);
+
+var polyline = new BMap.Polyline([point,point19,point30,point3,point5,point24,point20,point18,point21,point2,point14,point
+], {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+//map.addOverlay(polyline);
+
+
+var polyline = new BMap.Polyline([point,point36,point7,point42,point13,point15,point12,point34,point17,point4,point22,point
+], {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+//map.addOverlay(polyline);
+
+var polyline = new BMap.Polyline([
+point,point38,point39,point28,point6,point50,point33,point10,point16,point8,point35,point
+], {strokeColor:"blue", strokeWeight:6, strokeOpacity:0.5});
+//map.addOverlay(polyline);
+
+var polyline = new BMap.Polyline([
+point,point37,point47,point9,point43,point49,point23,point25,point27,point46,point32,point
+], {strokeColor:"blue", strokeWeight:6, strokeOpacity:0});
+map.addOverlay(polyline);
+
+</script>
